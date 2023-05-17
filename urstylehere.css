@@ -1,0 +1,394 @@
+/******************** here setting for all webpage***************** */
+*{
+  box-sizing:border-box;
+  margin: 0;
+  padding:0;
+} 
+ /*************** to add specific font to webpage******************* */
+ a {
+  color: white;
+  text-decoration: none;
+}
+body{
+  background-color: #d6d6d6;
+}
+
+/********************* to add animation in transalte between home-contat-about*************** */
+html{
+  scroll-behavior: smooth;
+} 
+
+/********************** to add specific font to webpage*************** */
+@font-face{
+  font-family: FONT1;
+  src: url(folderofitems/fontss/NXT.otf);
+  
+  
+}
+@font-face{
+    font-family: FONT2;
+    src: url(folderofitems/fontss/Mollyn-Regular.ttf);
+  }
+
+
+  
+ /*NAVIGATION BAR -----------------------------------------
+                  AHMED SLIM        HOME |  CONTACT | ABOUT
+   ------------------------------------------------------ */
+    /* NAV BACKGROUND */
+    #barnav {
+      background:  #DC052D;
+      height: 90px;
+      position: relative;
+      box-shadow:0 1px 4px rgba(0,0,0, 8),0 0 40px rgba(0,0,0,0.1)inset;
+  }
+
+      /* NAV TITLE */
+  #tit {
+      color: white;
+      float: left;
+      padding : 10px  0px 0px 15px;
+      font-size: 60px;
+      font-family: FONT1;   
+  }
+
+       /* NAV HOME-CONTACT-ABOUT */
+  ul{ 
+    font-family: FONT2;
+      float: right;
+      margin: 25px 50px 0px 0px;
+  } 
+  li{
+    display: inline-block;
+    margin-top: 5px;
+  } 
+
+/*MAIN------------------------------------------------------
+ PARAGRAPH                                         L O G O 
+------------------------------------------------------------- */  
+    /*BACKGROUND COLOR*/
+    #mainnav {
+      background: #C60428;
+      height: 250px;
+    }
+
+    /*WEBPAGE PRGH INTRODUCTION + LOGO POSTITION */
+    .parg {  
+      font-size: 18px;
+      font-family: FONT1; 
+      color: white;
+      width: 100%;
+      white-space: nowrap ;
+      overflow: hidden;
+      animation: typing 18s infinite  ,
+      cursor .4s step-end infinite alternate;
+      padding: 50px 0px 0px 15px;
+      display: flex;
+      justify-content: left;
+      align-items: left;
+    }
+    @keyframes cursor {
+      50% { border-color:transparent}
+    }
+    @keyframes typing{
+      from{width: 0}
+
+    }
+    /* LOGO SIZE  & ANIMATION */
+     #mainnav img {
+     float: right;
+     padding-right: 75px;
+     width: 205px;
+     transform: translateY(0px);
+     animation: float 6s ease-in-out infinite;    
+}
+
+
+/*------------------------------------------------------
+**********************  HOME TITLE     ******************************           
+------------------------------------------------------------- */  
+  /* HOME TITLE */
+  .hometext{
+    color: #DC052D;
+    padding-top: 15px;
+    font-family: FONT1;
+    text-align: center;
+  }
+  
+/*------------------------------------------------------
+**********************  PHOTOS OF WEB PAGE      *****************         
+------------------------------------------------------------- */  
+
+/* SPACE FOR IMAGES YOU CAN CHANGE BACKGROUND THAT CONATIN PHOTOS HERE */
+    #yourphotos{
+        margin: 0;
+        padding: 0;
+       background-color: #F5F7F9;
+       height: 750px;
+       position: relative;
+    }
+
+ 
+  .ahmedslim{
+    position: absolute;
+    padding-top: 20px;
+    left: 50%;
+    Transform:translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imgbox{
+    width: 200px;
+    height: 500px;
+    margin: 2px;
+  border-radius: 30px;
+  background: url(4PHOTOS/1.jpg) center /cover no-repeat ;
+  transition: width 0.5s;
+  position: relative;
+  }
+  .imgbox:nth-child(1){
+  background: url(bayer/25.jpg) center/cover;
+  }
+  .imgbox:nth-child(2){
+  background: url(bayer/22.jpg) center/cover;
+
+  }
+  .imgbox:nth-child(3){
+  background: url(bayer/19.jpg) center/cover;
+  }
+  .imgbox:nth-child(4){
+  background: url(bayer/lucas21.jpg) center/cover;
+  }
+  .imgbox:nth-child(5){
+  background: url(bayer/neuer.jpg) center/cover;
+  }
+ .imgbox:hover{
+  width: 500px;
+  cursor: pointer;
+  }   
+  .imgbox h3{
+  color:white;
+  font-family: FONT1;  
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  opacity: 0;
+  transition: bottom 0.5s,opacity 0.5s;
+  }
+  .imgbox:hover h3{
+  opacity: 1;
+  bottom: 25px;
+  } 
+
+/*------------------------------------------------------
+*********** CONTACT EMAIL & USER INFORMATION     ************      
+------------------------------------------------------------- */  
+
+#contitle{
+  color: #DC052D;
+  padding-top: 15px;
+  font-family: FONT1;
+  text-align: center;
+}
+ 
+#espaceforcontact{
+ background-color: #F5F7F9;
+ height: 750px;
+ position: relative;
+ 
+}
+#contactt{
+  font-family: FONT1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  padding-top: 350px;
+  
+   }
+   form{
+    padding-bottom: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    gap: 5px;
+    width: 600px;
+    height: 300px;
+   
+   }
+
+   #fname::placeholder,#email::placeholder{
+    color: #e4d4a7;
+   }
+   input[type=submit]{
+    height: 30px;
+    width: 80px;
+    border:none;
+    border-radius: 15px;
+    background-color: rgb(192, 117, 117); 
+    transition: 1s;
+    cursor: pointer;
+    color: azure; 
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase; 
+   }
+   input[type=submit]:hover{
+    background-color:#DC052D;
+   }
+   #fname,#email{
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: #a1b5ca;
+    color: #0066B8; 
+   }
+   #fmessage{
+    width: 250px;
+    height: 120px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #a1b5ca;
+    color: #0066B8; 
+   }
+   #fname::placeholder,#email::placeholder,#fmessage::placeholder{
+    font-size: 10px;
+    font-family: FONT1;
+    text-align: center;
+    color: #0066B8;
+   }
+   input[type=reset]{
+    height: 30px;
+    width: 80px;
+    border:none;
+    border-radius: 15px;
+    background-color: rgb(192, 117, 117); 
+    transition: 1s;
+    cursor: pointer;
+    color: azure; 
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase; 
+   }
+   input[type=reset]:hover{
+    background-color: #DC052D;
+   }
+
+
+/*------------------------------------------------------
+******************* ABOUT & THE FOOTER   *****************     
+------------------------------------------------------------- */  
+#about{
+
+  height: 200px;
+  border: black solid;
+}
+footer {
+  position:بخ;
+  width: auto;
+  background: #DC052D;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer.socialmedia{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: warp;
+}
+footer.socialmedia li {
+  list-style: none;
+}
+footer.socialmedia li a {
+  color: aliceblue;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+footer p {
+  font-family: FONT2;
+  color: beige;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+
+/*here animation for the logo*/
+@keyframes float{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-50px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+/*تأثير الانتقال بين الصفحات*/
+@keyframes transitionIn{
+  from{
+    opacity: 0;
+    transform: rotateX(-10deg);
+
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+
+  }
+}
+#espaceforcontact{
+  animation: transitionIn 0.75s;
+}
+
+#yourphotos{
+  animation: transitionIn 0.75s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+ 
+
+  
